@@ -1,0 +1,29 @@
+.message-box {
+    position: fixed;
+    bottom: 1;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-top-right-radius: 10px;
+    max-height: 300px;
+    overflow: auto;
+    transition: all 0.3s ease;
+    width: 300px;
+    transform: translateY(100%);
+  }
+  
+  .message-box.open {
+    transform: translateY(0);
+  }
+  
+  .toggle-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .messages {
+    padding: 10px;
+  }
+  

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { DessinService } from '../dessin.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-formulaire-dessin',
@@ -10,7 +11,11 @@ import { DessinService } from '../dessin.service';
 export class FormulaireDessinComponent implements OnInit {
   dessinForm!: FormGroup;
 
-  constructor(private fb: FormBuilder, private dessinService: DessinService) {}
+  constructor(
+    private fb: FormBuilder,
+    private dessinService: DessinService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.dessinForm = this.fb.group({
@@ -55,6 +60,6 @@ export class FormulaireDessinComponent implements OnInit {
   }
 
   private redirectToList(): void {
-    // this.router.navigate(['/dessins']);
+    this.router.navigate(['/dessins']);
   }
 }

@@ -1,0 +1,15 @@
+.canvas-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .dessin-form {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  

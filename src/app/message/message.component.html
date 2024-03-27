@@ -1,1 +1,9 @@
-<p>message works!</p>
+<div class="message-box" [class.open]="isOpen">
+    <div class="toggle-button" (click)="toggleOpen()">
+      {{ isOpen ? 'Hide Messages' : 'Show Messages' }}
+    </div>
+    <div *ngIf="isOpen" class="messages">
+      <div *ngFor="let message of messages">{{ message }}</div>
+    </div>
+  </div>
+  

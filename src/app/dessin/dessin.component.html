@@ -1,3 +1,27 @@
-<p>dessin works!</p>
-<button (click)="addRectangle()">Add Rectangle</button>
-<canvas #htmlCanvas></canvas>
+<mat-toolbar color="primary">
+    <a mat-button routerLink="/dessins">
+        <mat-icon>arrow_back</mat-icon>
+        Liste
+    </a>
+    <span class="example-spacer"></span>
+    <div class="btn-list">
+        <div class="toolset">
+            <app-color-picker (colorChange)="changeFormColor($event)"></app-color-picker>
+            <app-forme-geometrique [canvas]="canvas" [currentColor]="currentColor"></app-forme-geometrique>
+        </div>
+        
+        <button mat-icon-button color="warn" (click)="deleteSelected()" matTooltip="Supprimer la sélection">
+            <mat-icon>delete</mat-icon>
+        </button>
+        <button mat-icon-button (click)="resetScene()" matTooltip="Effacer">
+            <mat-icon>cleaning_services</mat-icon>
+        </button>
+        <button mat-icon-button (click)="saveScene()" matTooltip="Sauvegarder">
+            <mat-icon>save_alt</mat-icon>
+        </button>
+    </div>
+</mat-toolbar>
+<div class="canvas-container">
+    <canvas #htmlCanvas></canvas>
+</div>
+<app-message [messages]="logMessages"></app-message>

@@ -1,1 +1,24 @@
-<p>forme-geometrique works!</p>
+<div class="toolset">
+    <button mat-icon-button color="accent" (click)="removeFreeDrawing()" matTooltip="Curseur">
+        <mat-icon>mouse</mat-icon>
+    </button>
+    <button mat-icon-button color="accent" (click)="addRectangle()" matTooltip="Rectangle">
+      <mat-icon>crop_din</mat-icon>
+    </button>
+    <button mat-icon-button color="accent" (click)="addCircle()" matTooltip="Cercle">
+      <mat-icon>radio_button_unchecked</mat-icon>
+    </button>
+    <button mat-icon-button color="accent" (click)="addLine()" matTooltip="Ligne">
+      <mat-icon>show_chart</mat-icon>
+    </button>
+    <button mat-icon-button color="accent" (click)="addTriangle()" matTooltip="Triangle">
+      <mat-icon>change_history</mat-icon>
+    </button>
+    <button mat-icon-button color="accent" (click)="addText()" matTooltip="Texte">
+      <mat-icon>text_fields</mat-icon>
+    </button>
+    <button mat-icon-button color="accent" (click)="addFreeDrawing()" matTooltip="Dessin Libre">
+      <mat-icon>gesture</mat-icon>
+    </button>
+  </div>
+  

@@ -1,0 +1,14 @@
+{
+    "name": "httpserver",
+    "version": "0.0.0",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "build": "npm build"
+    },
+    "private": true,
+    "dependencies": {
+        "express": "^4.17.1",
+        "path": "^0.12.7"
+    }
+}

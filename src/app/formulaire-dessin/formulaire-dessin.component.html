@@ -1,12 +1,19 @@
-<p>formulaire-dessin works!</p>
-<form [formGroup]="dessinForm" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <label for="titre">Titre du Dessin</label>
-      <input type="text" id="titre" class="form-control" formControlName="titre">
-    <div *ngIf="dessinForm.get('titre')?.errors && dessinForm.get('titre')?.touched">
-        <small class="text-danger" *ngIf="dessinForm.get('titre')?.errors?.['required']">Le titre est requis.</small>
-      </div>
-    </div>
-    <button type="submit" class="btn btn-primary">Sauvegarder</button>
+<mat-toolbar color="primary">
+  <a mat-button routerLink="/dessins">
+      <mat-icon>arrow_back</mat-icon>
+      Liste
+  </a>
+</mat-toolbar>
+
+<div class="canvas-container">
+  <form [formGroup]="dessinForm" (ngSubmit)="onSubmit()" class="dessin-form">
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Titre du Dessin</mat-label>
+      <input matInput type="text" formControlName="titre">
+      <mat-error *ngIf="dessinForm.get('titre')?.errors?.['required']">
+        Le titre est requis.
+      </mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit" [disabled]="dessinForm.invalid">Sauvegarder</button>
   </form>
-  
+</div>

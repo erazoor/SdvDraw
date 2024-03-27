@@ -10,7 +10,15 @@ import { FormeGeometriqueComponent } from './forme-geometrique/forme-geometrique
 import { MessageComponent } from './message/message.component';
 import { FormulaireDessinComponent } from './formulaire-dessin/formulaire-dessin.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { MatTableModule } from '@angular/material/table';
+import { ColorPickerComponent } from './color-picker/color-picker.component';
 
 @NgModule({
   declarations: [
@@ -20,12 +28,20 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormeGeometriqueComponent,
     MessageComponent,
     FormulaireDessinComponent,
+    ColorPickerComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatInputModule,
+    MatTooltipModule,
+    MatTableModule,
+    FormsModule,
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
