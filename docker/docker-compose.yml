@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  angular:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    ports:
+      - "4000:4000"
+    volumes:
+      - ../src:/app/src
+      - ../dist:/app/dist
+    depends_on:
+      - json-server
+
+  json-server:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile.server
+    ports:
+      - "3000:3000"
+    volumes:
+      - ../db.json:/data/db.json

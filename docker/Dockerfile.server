@@ -1,0 +1,11 @@
+FROM node:16-slim
+
+WORKDIR /usr/src/app
+
+RUN npm install -g json-server
+
+COPY ../db.json .
+
+EXPOSE 3000
+
+CMD ["json-server", "--watch", "db.json"]
