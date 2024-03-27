@@ -1,6 +1,6 @@
 FROM ubuntu:jammy as dev
 
-RUN apt-get update && apt-get install -y xz-utils
+RUN apt-get update && apt-get install -y xz-utils && apt-get install -y iputils-ping
 RUN mkdir -p /appang 
 RUN mkdir -p /opt/nodejs
 
