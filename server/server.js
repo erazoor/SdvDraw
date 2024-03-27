@@ -4,10 +4,10 @@ const path = require("path");
 const app = express();
 const port = 4000;
 
-app.use(express.static(path.join(__dirname, "../docker/dist/")));
+app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-  res.redirect("home");
+  res.redirect("index.html");
 });
 
 app.listen(port, () => {

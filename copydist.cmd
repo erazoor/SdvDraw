@@ -1,2 +1,2 @@
-mkdir .\\docker\\dist\\
-copy .\\dist\\sdv-draw\\browser\\ .\\docker\\dist\\
+mkdir .\\server\\public\\
+copy .\\dist\\sdv-draw\\browser\\ .\\server\\public\\
