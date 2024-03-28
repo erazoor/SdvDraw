@@ -21,3 +21,17 @@ services:
       - "3000:3000"
     volumes:
       - ../:/data
+#
+# We can also build the file like so :
+# services:
+#   angular:
+#     image: # image name
+#     ports: # port mapping
+#
+#   json-server:
+#     image: # image name
+#     ports: # port mapping
+#
+# volumes:
+#   stack-volume:
+#
