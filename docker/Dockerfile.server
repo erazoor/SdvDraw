@@ -2,10 +2,14 @@ FROM node:16-slim
 
 WORKDIR /usr/src/app
 
-RUN npm install -g json-server
+RUN mkdir -p /database
 
-COPY ../db.json .
+COPY db.json /database/db.json
+
+RUN npm install -g json-server
 
 EXPOSE 3000
 
-CMD ["json-server", "--watch", "db.json"]
+VOLUME /database
+
+CMD ["json-server", "--watch", "/data/db.json"]
