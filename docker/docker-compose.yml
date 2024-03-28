@@ -6,7 +6,7 @@ services:
       context: ../
       dockerfile: docker/Dockerfile
     ports:
-      - "4000:4000"
+      - "4001:4001"
     volumes:
       - ../src:/app/src
       - ../dist:/app/dist
@@ -18,7 +18,7 @@ services:
       context: ../
       dockerfile: docker/Dockerfile.server
     ports:
-      - "3000:3000"
+      - "3001:3001"
     volumes:
       - ../:/data
 #
